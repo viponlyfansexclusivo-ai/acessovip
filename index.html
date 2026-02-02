@@ -104,16 +104,16 @@ function trackBotClick(e) {
   e.preventDefault();
 
   if (typeof ttq !== 'undefined') {
-    ttq.track('ClickButton', {
-      content_name: 'Bot VIP Telegram',
+    ttq.track('InitiateCheckout', {
       content_id: 'viponly24h_bot',
+      content_name: 'Bot VIP Telegram',
       content_type: 'telegram_bot'
     });
   }
 
-  setTimeout(function () {
-    window.open('https://t.me/viponly24h_bot', '_blank');
-  }, 300);
+  // redirecionamento direto (mais confiável)
+  window.location.href =
+    'https://t.me/viponly24h_bot?start=utm_source=tiktok&utm_campaign=vip&utm_medium=cpc';
 }
 </script>
   
