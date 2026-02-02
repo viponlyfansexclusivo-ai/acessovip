@@ -98,6 +98,25 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 </head>
 
 <body>
+
+  <script>
+function trackBotClick(e) {
+  e.preventDefault();
+
+  if (typeof ttq !== 'undefined') {
+    ttq.track('ClickButton', {
+      content_name: 'Bot VIP Telegram',
+      content_id: 'viponly24h_bot',
+      content_type: 'telegram_bot'
+    });
+  }
+
+  setTimeout(function () {
+    window.open('https://t.me/viponly24h_bot', '_blank');
+  }, 300);
+}
+</script>
+  
   <div class="container">
     <div class="logo">GRUPO VIP 🔒</div>
 
@@ -119,8 +138,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 <a href="https://t.me/viponly24h_bot"
    target="_blank"
    class="cta"
-   onclick="ttq.track('InitiateCheckout');">
-   🔓 Desbloquear Acesso Agora
+   onclick="trackBotClick(event)">
+     Desbloquear Acesso Agora 🔓
 </a>
 
     <div class="alert">
